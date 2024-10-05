@@ -85,7 +85,7 @@ Output: Client Version: v1.16.8-eks-e16311
 
 
 ### Step-02-02: Windows 10 - Install and configure kubectl
-- Install kubectl on Windows 10 
+- Install kubectl on Windows 10
 ```
 mkdir kubectlbinary
 cd kubectlbinary
@@ -100,7 +100,12 @@ C:\Users\KALYAN\Documents\kubectlbinary
 kubectl version --short --client
 kubectl version --client
 ```
+- Incase there is some issue with kubectl check the version isntalled. I had an old version of aws cli. After upgrade it satrted working
+- Since EKS cluster was already rnnig had to run below command
+```
+aws eks update-kubeconfig --region us-east-1 --name eksdemo1
 
+```
 ## Step-03: Install eksctl CLI
 ### Step-03-01: eksctl on Mac
 ```
