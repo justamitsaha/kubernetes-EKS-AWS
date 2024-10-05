@@ -99,7 +99,11 @@ kubectl get nodes -o wide
 # Our kubectl context should be automatically changed to new cluster
 kubectl config view --minify
 ```
+#In case kubectl is not updating the config then can use below comand
+```
+aws eks update-kubeconfig --region us-east-1 --name eksdemo1
 
+```
 ### Verify Worker Node IAM Role and list of Policies
 - Go to Services -> EC2 -> Worker Nodes
 - Click on **IAM Role associated to EC2 Worker Nodes**
