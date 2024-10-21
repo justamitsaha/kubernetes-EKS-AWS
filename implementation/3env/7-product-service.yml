@@ -36,6 +36,11 @@ spec:
             configMapKeyRef:
               name: microservice-master-configmap
               key: EUREKA_HOST
+        - name: SPRING_CONFIG_IMPORT
+          valueFrom:
+            configMapKeyRef:
+              name: microservice-master-configmap
+              key: CONFIG_SERVER_HOST
         livenessProbe:
           exec:
             command:
